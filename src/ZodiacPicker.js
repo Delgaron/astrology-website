@@ -21,7 +21,7 @@ const ZodiacPicker = () => {
   };
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+    <div style={{ textAlign: 'center', marginTop: '50px', color: 'white'}}>
       <h1>Choose Your Zodiac Sign</h1>
       <div>
         <button onClick={handlePrevious}>Left</button>
