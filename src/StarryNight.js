@@ -31,7 +31,7 @@ const StarryNight = () => {
             top: `${Math.random() * 100}vh`,
             left: `${Math.random() * 100}vw`,
             width: `${Math.random() * 3 + 1}px`,
-            height: `${Math.random() * 3 + 1}px`,
+            height: `${Math.random() * 3 + 2}px`,
             backgroundColor: `rgba(255, 255, 255, ${Math.random()})`,
           }}
           data-speed={Math.random() * 10}
