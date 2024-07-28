@@ -1,32 +1,34 @@
 import React, { useState } from 'react';
+import './ZodiacPicker.css';
 
 const zodiacSigns = [
-  'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 
+  'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo',
   'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'
 ];
 
 const ZodiacPicker = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handlePrevious = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === 0 ? zodiacSigns.length - 1 : prevIndex - 1
-    );
-  };
+  const [currentSignIndex, setCurrentSignIndex] = useState(0);
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === zodiacSigns.length - 1 ? 0 : prevIndex + 1
-    );
+    setCurrentSignIndex((prevIndex) => (prevIndex + 1) % zodiacSigns.length);
+  };
+
+  const handlePrevious = () => {
+    setCurrentSignIndex((prevIndex) => (prevIndex - 1 + zodiacSigns.length) % zodiacSigns.length);
   };
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px', color: 'white'}}>
-      <h1>Choose Your Zodiac Sign</h1>
-      <div>
-        <button onClick={handlePrevious}>Left</button>
-        <span style={{ margin: '0 20px', fontSize: '20px' }}>{zodiacSigns[currentIndex]}</span>
-        <button onClick={handleNext}>Right</button>
+    <div className="zodiac-picker">
+      <div className="zodiac-sign">
+        <h1>{zodiacSigns[currentSignIndex]}</h1>
+        <img
+          src={`${process.env.PUBLIC_URL}/zodiac-images/${zodiacSigns[currentSignIndex].toLowerCase()}.png`}
+          alt={zodiacSigns[currentSignIndex]}
+        />
+      </div>
+      <div className="zodiac-buttons">
+        <button onClick={handlePrevious}>Previous</button>
+        <button onClick={handleNext}>Next</button>
       </div>
     </div>
   );

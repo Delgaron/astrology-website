@@ -1,0 +1,30 @@
+.zodiac-picker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+  }
+  
+  .zodiac-sign {
+    margin: 20px;
+  }
+  
+  .zodiac-sign img {
+    width: 200px;  /* Adjust size as needed */
+    height: auto;
+    margin-top: 10px;
+  }
+  
+  .zodiac-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 220px;  /* Ensure this width is larger than the image width */
+    margin-top: 20px;
+  }
+  
+  .zodiac-buttons button {
+    margin: 0 10px;
+    flex: 1;
+  }
