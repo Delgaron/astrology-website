@@ -8,7 +8,7 @@
   z-index: -1;
   background: 
     radial-gradient(circle at center, rgba(34, 8, 68, 0.8), rgba(33, 11, 48, 0.8)),
-    radial-gradient(circle at center, rgb(77, 11, 94), rgba(0, 0, 0, 1));
+    radial-gradient(circle at center, rgb(77, 11, 94), rgb(47, 7, 63));
   background-size: cover;
   background-blend-mode: overlay;
 }
