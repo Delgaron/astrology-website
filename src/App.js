@@ -9,8 +9,9 @@ const App = () => {
     <div className="app">
       <StarryNight />
       <div className="content" style={{ textAlign: 'center', color: 'white'}}>
-        <h1>Get you daily fortune</h1>
-        <p>visit our other media</p>
+        <header className="header">
+          <img src="MAIN_TAB.png" alt="Logo" className="centered-image" />
+        </header>
         <ZodiacPicker />
         <div style={{ height: '200vh' }}></div>
       </div>
